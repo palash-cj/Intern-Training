@@ -1,0 +1,21 @@
+Callback Functions
+
+-> A function which is passed as an argument in another function
+-> A function that is to be executed after the execution of another function
+
+<script>
+    function a(b){
+        console.log(`hello world`);
+        // setTimeout(function(){
+        //     console.log(`waiting`);
+        //     b();
+        // },3000);
+        b();
+    }
+    function b(){
+        console.log(`How are you`);
+    }
+
+    a(b);
+    
+</script>

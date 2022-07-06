@@ -1,0 +1,28 @@
+High Order Function 
+
+-> A function that take other function as an argument or return another function as result
+
+<script>
+    function a(name){
+        if(name=="palash"){
+            debugger;
+            return function (country){
+                console.log(`Hi ${name}!. Welcome to ${country}`);
+            }
+        }if(name=="sumit"){
+            debugger;
+            return (country)=>{
+                console.log(`Hi ${name}!. Welcome to ${country}`);
+            }
+        }if(name=="daksh"){
+            debugger;
+            return (country)=>{
+                console.log(`Hi ${name}!. Welcome to ${country}`);
+            }
+        }else{
+            console.log(`Hi Dear!. Welcome to ${country}`);
+        }
+    }
+    debugger;
+    a("palash")("India");
+</script>

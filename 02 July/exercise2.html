@@ -1,0 +1,24 @@
+Function is first class citizen
+
+-> function can be treated as variable
+<!-- <script>
+    var a=function(){
+        console.log(`hello`);
+    }
+    a();
+</script> -->
+-> function can be passed as an argument
+<!-- <script>
+    Callback functions refer exercise 1
+</script> -->
+-> returning functions
+<script>
+    function a(){
+        return function b(){
+            console.log(`hello world`);
+        }
+    }
+    const c= a();
+    c();
+    
+</script>
