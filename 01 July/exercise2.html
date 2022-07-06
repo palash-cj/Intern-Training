@@ -1,0 +1,31 @@
+<!-- Execution stack -->
+
+<script>
+    var a="hello";
+    function b(){
+        debugger;
+        console.log("how are you ?");
+        c();
+
+        function c(){
+            debugger;
+            console.log("how old are you");
+        }
+    }
+    console.log(a);
+    debugger;
+    b();
+</script>
+
+<!-- code execution explanation:
+1. a...(console.log(a)); Global execution context gets generate and pushed into execution stack
+2. debugger blockes the code before b()
+3. js engine calls the function b & new execution context for fun b gets push into execution stack
+4. debugger blovks the code;
+5. consoles "how are you"
+6. function c is called & new execution context for fun c gets pushed into execution stack
+7. debugger blocks the code
+8. consoles "how old are you"
+9. execution context for fun c gets popped
+10. execution context for fun b gets popped
+11. Only global stack as 'anonymous' remains in the stack -->

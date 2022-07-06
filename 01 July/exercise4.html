@@ -1,0 +1,14 @@
+<!-- variable hoisting -->
+
+<script>
+    //console.log(a);//a is not defined
+    console.log(b);//b is undefined
+    var b=10;
+    console.log(b);//10
+    console.log(c);//can't used before initialisation
+    let c=20;//let or const don't support hoisting
+
+    d=50;
+    console.log(d);//50
+    var d;
+</script>

@@ -1,0 +1,19 @@
+<!-- function hoisting -->
+
+<script>
+    // sum();//works asusual 
+    function sum(){
+        add=1+1;
+        console.log(add);
+    }
+    sum();//works ASUSUAL
+
+    num();//num is not a function
+    var num=function(){
+        add=2+2;
+        console.log(add);
+    }
+    num();//works asusual 
+</script>
+
+<!-- function declaration without keyword 'function' is not supported -->

@@ -1,0 +1,37 @@
+<!-- this keyword -->
+
+<!-- Alone, this refers to global object 'window'
+In regular function, this refers to global object
+In method, this refers to owner object
+In fun with a strict mode, this is undefined -->
+
+<script>
+    console.log(this);//window
+
+    function abc(){
+        var name ="palash";
+        console.log(this);//window
+        var xyz = function(){
+            console.log(this);//window as xyz is regular function
+        }
+        xyz();
+    }
+    abc();
+
+    var gem={
+        a: "blue",
+        b: "red",
+        c: function(){
+            a=10;
+            console.log(this);//gem
+            console.log(this.a);//blue as in method 'this' refers to owner object
+            
+            function gems(){
+                console.log(this);//window as gems is a regular function
+            }
+            gems();
+        }
+        
+    }
+    gem.c();
+</script>

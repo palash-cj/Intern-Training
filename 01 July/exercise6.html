@@ -1,0 +1,22 @@
+<!-- Pass by value Vs Pass by reference -->
+
+<script>
+    var a=10;
+    var gems={
+        name:"palash",
+        surname: "jemi"
+    }
+
+    function sum(x,y){
+        x=100;
+        y.name="sumit";
+        
+    }
+    sum(a,gems);
+
+    console.log(a);//10
+    console.log(gems.name);//sumit
+</script>
+
+<!-- Pass by value works with primitive data type and is immutable as particular value is passes
+Pass by reference works with non primitive datatype & is mutable as particular address is passes -->
