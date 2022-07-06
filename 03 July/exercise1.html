@@ -1,0 +1,38 @@
+Closure
+
+-> When inner function can access the variables of parent function, global variables and parameters as well
+
+<!-- <script>
+    function a(y){
+        debugger;
+        var x=10;
+        function b(){
+            debugger;
+            let sum = 1+x+y;
+            console.log(`Sum of numbers is ${sum}`);
+        }
+        return b;
+    }
+    debugger;
+    a(2)();
+</script> -->
+
+<script>
+    function a(name){
+        return function b(topic){
+            debugger;
+            if(name === 'palash'){
+                debugger;
+                console.log(`Hi ${name}!. Welcome to ${topic}.`);
+            }else if(name === 'jemi'){
+                debugger;
+                console.log(`Hi ${name}!. Welcome to ${topic}.`);
+            }else if(name === 'palashjemi'){
+                debugger;
+                console.log(`Hi ${name}!. Welcome to ${topic}.`);
+            }
+        }
+    }
+    debugger;
+    a("palash")("India");
+</script>

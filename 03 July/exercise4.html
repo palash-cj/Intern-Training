@@ -1,0 +1,17 @@
+bind()
+
+-> It is used to bind a object to a function
+
+<script>
+    const gems={
+        name : "palash",
+        surname : "jemi"
+    }
+
+    function f1(city){
+        console.log(`Hi ${this.name} ${this.surname} from ${city}`);
+    }
+
+    var res=f1.bind(gems);
+    res("Amravati");
+</script>

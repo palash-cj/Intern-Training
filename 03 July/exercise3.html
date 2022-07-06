@@ -1,0 +1,22 @@
+apply()
+
+-> Is is similar to call()
+-> call() takes arguments seperately but apply() takes arguments in array
+-> Math.max.apply(null, [1,2,3,4]); gives output as 4
+
+<script>
+    var person={
+        name : "palash",
+        surname : "jemi",
+        qualif : function(subject, grades){
+            console.log(`Hi ${this.name}. Your qualification is ${subject} with ${grades} gpa.`);
+        }
+    }
+
+    //person.qualif("B.Tech");
+    var person2 ={
+        name : "Sumit"
+    }
+
+    person.qualif.apply(person2, ["BCA", 8.5]);
+</script>

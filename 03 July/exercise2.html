@@ -1,0 +1,20 @@
+call()
+
+-> It is used to access the methods of another object from any object
+
+<script>
+    var person={
+        name : "palash",
+        surname : "jemi",
+        qualif : function(subject){
+            console.log(`Hi ${this.name}. Your qualification is ${subject}`);
+        }
+    }
+
+    person.qualif("B.Tech");
+    var person2 ={
+        name : "Sumit"
+    }
+
+    person.qualif.call(person2, "BCA");
+</script>
