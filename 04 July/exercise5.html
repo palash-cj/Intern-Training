@@ -1,0 +1,19 @@
+Object destructuring
+<script>
+    let bioData={
+        name : "palash",
+        lname: "jemi",
+        qualif : "B.tech",
+        Subjects : {
+            OS : 10,
+            DBMS : 20,
+            DSA : 30,
+        }
+    }
+
+    let {name, lname, qualif, Subjects}=bioData;//destructuring
+    console.log(`${name} ${lname} ${qualif} ${Subjects.DSA}`);
+
+    let {name:myname}=bioData;//changing the name of properties
+    console.log(`${myname}`);
+</script>

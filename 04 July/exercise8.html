@@ -1,0 +1,27 @@
+class, objects, inheritance
+
+<script>
+    class Student{
+        constructor(name,lname){
+            this.name=name;
+            this.lname=lname;
+        }
+        bioData(){//instance class which evokes along with the class as a function
+            console.log(`Hello ${this.name} ${this.lname}.`);//use this keyword while accessing variables
+        }
+    }
+    class Player extends Student{//Inherit the parent class Student
+        constructor(name,lname,age){
+            super(name,lname);//super() call the constructor of parent class
+            this.age=age;
+        }
+        bioData(){
+            console.log(`Hello ${this.name} ${this.lname}. Age is ${this.age}`);
+        }
+    }
+    let obj2= new Player("palash","jemi",21);//new keyword is used to add new instance of class
+    obj2.bioData();
+
+    let obj1=new Student("palash","jemi");
+    obj1.bioData();
+</script>

@@ -1,0 +1,38 @@
+Spread Operator 
+
+-> is is similar to rest Operator
+
+
+<script>
+    function a(x,y){
+        console.log(x+y);
+    }
+    var arr=[1,2];
+    a.apply(null,arr);
+    a(...arr);
+    //both the above lines will procure the same output
+
+    //rplace concat
+    let c1=[1,2,3];
+    let c2=[4,5,6];
+    var c3=[7,8,9];
+    c1=[...c1,...c2,...c3];
+    console.log(c1);
+
+    //replace copy
+    //while we use pass by reference, if we change the values of any array is changes all the references
+    //but with th help of this we can elemate this error
+
+    let a1=[1,2,3];
+    let a2=[...a1,4,5];
+    console.log(`a2 is ${a2}`);
+    console.log(`a1 is ${a1}`);
+
+    function abc(x,y){
+        console.log(x+y);
+    }
+    abc.apply(null,arr);
+    abc(...a1);
+        //both the above lines will procure the same output
+
+</script>
