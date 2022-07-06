@@ -1,0 +1,45 @@
+Event Loop
+
+
+-> Js is an evnt drivn language i.e it transfrs the control of execution to further
+ code if some part is taking more time to execute
+-> setTimeout(), DOM, Ajax/API calls comes under web apis not in execution stack
+-> When the whole code gets excuted web apis transfers the setTimeout to message queue
+-> further message queue transfers the setTimeout to execution stack
+
+<script>
+    function a(){
+        setTimeout(()=>{
+            debugger;
+            console.log("Hello 2s")
+        },2000);
+
+
+        setTimeout(()=>{
+            debugger;
+            console.log("Hello 3s");
+        },3000);
+        setTimeout(()=>{      
+            debugger;     
+            console.log("Hello 4s")
+        },4000);
+        setTimeout(()=>{
+            debugger;
+            console.log("Hello 5s")
+        },5000);
+        setTimeout(()=>{
+            debugger;
+            console.log("Hello 6s")
+        },6000);
+
+    }
+
+    function b(){
+        console.log("Hello 0s");
+        debugger;
+        a();
+        debugger;
+        console.log("Hello 0s2");
+    }
+    b();
+</script>

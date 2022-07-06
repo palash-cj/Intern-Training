@@ -1,0 +1,24 @@
+Callback Hell
+-> Too many nested callback functions
+-> callback function inside callback function
+<script>
+    let a= ()=>{
+        setTimeout(()=>{
+            let biodata={
+                name :" 'Palash",
+                age : 21,
+                gender : 'male'
+            }
+            console.log(`I am ${biodata.name}.`);
+
+            setTimeout((name)=>{
+                console.log(`I am ${name}. I am ${biodata.age} yars old.`);
+
+                setTimeout((gender)=>{
+                    console.log(`I am ${biodata.name}. I am ${biodata.age} yars old. I am ${gender}`);
+                }, 2000, biodata.gender)
+            },2000,biodata.name);
+        },2000);
+    }
+    a();
+</script>

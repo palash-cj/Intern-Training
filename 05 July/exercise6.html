@@ -1,0 +1,14 @@
+Covid 19 tracker
+
+<script>
+
+async function result(){
+    let jsondata = await fetch('https://api.covid19api.com/summary');
+    console.log(jsondata);
+
+    let res=await jsondata.json();
+    console.log(res.Countries[77].Country);
+}
+result();
+
+</script>

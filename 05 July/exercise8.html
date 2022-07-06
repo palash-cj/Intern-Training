@@ -1,0 +1,27 @@
+array reduce
+
+-> it reduces an array in an single elment 
+-> single element can be a single number or string
+
+<script>
+    var arr=[1,-1,2,3];
+    let sum=0;
+    for(n of arr){
+        sum+=n;
+    }
+    console.log(sum);
+
+    const res2 = arr.reduce(
+        (accumulator, currentValue)=> accumulator+currentValue
+    ,0);
+    console.log(res2);
+
+    //here both the functions are doing the same task but with different syntax manner
+
+    const res3= arr.reduce((accumulator,currentValue)=>
+        accumulator+currentValue , " "
+    );
+    console.log(res3);
+
+    //here array is reduced to a string
+</script>

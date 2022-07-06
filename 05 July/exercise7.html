@@ -1,0 +1,19 @@
+Mapping in arrays
+
+<script>
+    var arr=[1,2,-3,4,5,6];
+    let a=arr.filter(n=> n>=0);//filter the array elemnts according to the constrain applied
+    let html = a.map(n=> '$'+n+'$');
+    let html1 = a.map(n=> {
+        let obj = { value : n};
+        return obj;
+    })
+    let html2 = a.map(n=> ({value:n}));
+    console.log(html2);
+
+    const res = arr
+    .filter(n=> n>=0)
+    .map(n=> ({value:n}))
+    .filter(obj=> obj.value>1);
+    console.log(res);
+</script>

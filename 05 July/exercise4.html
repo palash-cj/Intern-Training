@@ -1,0 +1,51 @@
+Async/await functions & Error handling
+
+-> async and await function is used to ftch or get the data of Promises
+-> await commands can only be written if async functions are created
+
+-> error handleing of async await functions can be resolved by try catch block
+
+
+<script>
+    let a= new Promise((resolve,reject)=>{//promise is created as an object
+        setTimeout(()=>{
+            var arr=[1,2,3,4];
+            resolve(arr);
+        }, 2000);
+    })
+
+    let b=(arr)=>{
+        return new Promise((resolve, reject)=>{//promise is created as an function
+            setTimeout((arr)=>{
+                let biodata={
+                name : "palash",
+                age : 21
+            }
+            resolve(`My name is ${biodata.name}. My roll no is ${arr[1]}.`)
+            }, 2000, arr);
+        })
+
+        
+    }
+
+    async function result(){
+        try{
+            var res = await a;//await is used to wait for the promise to resolve
+            console.log(res);
+
+            var res2 = await b(res);
+            console.log(res2);
+
+            return res2;
+        }catch(err){
+            console.log(err);
+        }
+    }
+
+
+    result().then((name)=>{//this is used to access or get the data from the promise return
+        console.log(name);
+    });
+
+
+</script>

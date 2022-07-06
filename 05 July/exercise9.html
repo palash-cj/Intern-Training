@@ -1,0 +1,16 @@
+array filter
+
+-> it filters the array with applied constrain
+
+<script>
+    var arr=[1,2,3,-4,5];
+    const res = arr.filter((value)=>{
+        return value>=0
+    })
+    console.log(res);
+
+    const res1 = arr.filter(n=> n>=0);
+    console.log(res1);
+    //if the function is returning a single line of code we can 
+    // exclude curly braces and return keyword as well
+</script>
