@@ -1,5 +1,6 @@
 -> This folder contains all the files of code executions that were implemented during training period of internship.
--> It has date wise folders which contains the files related to that day implmentations.
+
+-> It has date wise folders which contains the files related to that day implementations.
 
 -> So far, training period basically includes the learnings on:
 1. Javascript Basics
