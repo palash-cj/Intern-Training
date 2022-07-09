@@ -8,7 +8,7 @@ const server = http.createServer((req,res)=>{
     if(req.url=='/'){
         res.end("Hello from the other side");
     }else if(req.url=='/about'){
-        res.end("Hello from the AboutUS side");
+        res.end("Hello from the AboutUS side hello");
     }else if(req.url=='/contact'){
         res.end("Hello from the contact us side");
     }else{
