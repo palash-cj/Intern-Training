@@ -32,22 +32,28 @@ app.post('/post',(req,res)=>{
     })
     
 })
-app.put('/patch',(req,res)=>{
-    Entry.updateOne({name:"Sweety Sharma"},{city:"Nagpur"})
-    .then(()=>{
-        res.send("Document Updated Successfully");
-    })
-    .catch((e)=>{
-        console.log(e);
-    })
+app.put('/patch',async (req,res)=>{
+    try {
+        const result1 = await Entry.findByIdAndUpdate({_id:req.body._id},{
+            city : "Mumbai"
+        },
+        {
+            new:true // this line returns the updated data 
+        })
+        res.send(result1);
+    } catch (error) {
+        res.send('Some error occured')
+    }
+
 })
-app.delete('/delete',(req,res)=>{
-    Entry.deleteOne({name:req.body.name})
-    .then(()=>{
-        res.send("Document deleted successfully");
-    }).catch((err)=>{
-        res.send(err);
-    })
+app.delete('/delete',async (req,res)=>{
+    try {
+        const result = await Entry.findByIdAndDelete({_id:req.body._id});
+        res.send(result);
+        console.log('Deleted');
+    } catch (error) {
+        res.send("Some error occured")
+    }
 })
 
 app.listen(port, ()=>{
