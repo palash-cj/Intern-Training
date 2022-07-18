@@ -30,7 +30,7 @@ app.post('/login',async(req,res)=>{
  
          const result = await Register.findOne({email:email});// checking for the document in the collection
  
-         const isMatch = await bcrypt.compare(password, result.password);// matchingthe passwords
+         const isMatch = await bcrypt.compare(password, result.password);// matching the passwords
  
          const tokens = await result.generateJWT();// generating the token
          console.log(tokens);
