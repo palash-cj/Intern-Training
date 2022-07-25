@@ -2,10 +2,11 @@
 
 -> It has date wise folders which contains the files related to that day implementations.
 
--> So far, training period basically includes the learnings on:
+-> Training period basically had the following learnings:
 1. Javascript Basics
 2. Javascript ES6
 3. GIT Basics
 4. MySQL Database
 5. Node.Js Essentials
-6. Still Learning...
+6. MongoDB
+7. MVC Structuring

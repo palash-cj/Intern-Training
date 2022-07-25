@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<body>
+
+<!-- Navigation -->
+<nav class="w3-bar w3-black">
+  <a href="/" class="w3-button w3-bar-item">Home</a>
+  {{!-- <a href="#" class="w3-button w3-bar-item">Register</a> --}}
+  <a href="/logout" class="w3-button w3-bar-item">Logout</a>
+  <a href="/about" class="w3-button w3-bar-item">About</a>
+</nav>
+
+{{!-- <!-- Slide Show -->
+<section>
+  <img class="mySlides" src="img_band_la.jpg"
+  style="width:100%">
+  <img class="mySlides" src="img_band_ny.jpg"
+  style="width:100%">
+  <img class="mySlides" src="img_band_chicago.jpg"
+  style="width:100%">
+</section> --}}
+
+<!-- Band Description -->
+<section class="w3-container w3-center w3-content" style="max-width:600px">
+  <h1 class="w3-wide">Internship Training  </h1>
+  <h2 calss="w3-wide">vDoIt Technologies Pvt Ltd</h2>
+  <p class="w3-opacity"><i>Node Js Developement</i></p>
+  <p class="w3-justify">Hello, I am Palash Chandraprakash Jamaiwar, a Node Js Intern At vDoIt Technologies.  I joined here on 1st of July, 2022. On the very first day, company had provided me the roadmap of the whole training duration. Since then, my training on Node.js and related techonlogioes had started. Everyday, I had to complete the learnings as per thr roadmap with proper implementations and had to push those files on my github profile. 
+</br>
+</br>
+Topics that were covered in the training duration were:</br>
+<b>Javascript Basic To Advance</b></br>
+<b>MySQL</b></br>
+<b>Git</b></br>
+
+<b>Node.Js With Related Frameworks</b></br>
+<b>Postman Synchronisation</b></br>
+<b>MongoDb</b></br>
+</br>
+Proper implementations of my Internship files can be found at my Git profile.
+</p>
+</section>
+
+{{!-- <!-- Band Members -->
+<section class="w3-row-padding w3-center w3-light-grey">
+  <article class="w3-third">
+    <p>John</p>
+    <img src="img_bandmember.jpg" alt="Random Name" style="width:100%">
+    <p>John is the smartest.</p>
+  </article>
+  <article class="w3-third">
+    <p>Paul</p>
+    <img src="img_bandmember.jpg" alt="Random Name" style="width:100%">
+    <p>Paul is the prettiest.</p>
+  </article>
+  <article class="w3-third">
+    <p>Ringo</p>
+    <img src="img_bandmember.jpg" alt="Random Name" style="width:100%">
+    <p>Ringo is the funniest.</p>
+  </article>
+</section> --}}
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+  <a href="#"><i class="fa fa-facebook-official"></i></a>
+  <a href="#"><i class="fa fa-pinterest-p"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-flickr"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <p class="w3-medium">
+  Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+  </p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+
+</body>
+</html>
+

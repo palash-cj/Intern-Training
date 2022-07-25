@@ -48,6 +48,7 @@ const schema = new mongoose.Schema({
 schema.methods.generateJWT = async function(){
     try {
         const token = jwt.sign({_id:this._id}, process.env.SECRET_KEY); // generatingthe token
+        console.log('model');
         
         this.tokens=this.tokens.concat({token:token}); // storing the token 
         

@@ -3,6 +3,11 @@
 
 const jwt=require('jsonwebtoken');
 const Register = require('../models/model')
+const hbs = require('hbs');
+const express = require('express');
+const app = express();
+
+app.set("view engine", "hbs");// used for res.render methods
 
 const auth = async (req,res,next)=>{
     try {
@@ -18,7 +23,7 @@ const auth = async (req,res,next)=>{
         req.token=token;
         next();
     } catch (error) {
-        res.send(`Error occurred ${error}`);
+        res.status(200).render("home");
     }
 }
 module.exports = auth;
